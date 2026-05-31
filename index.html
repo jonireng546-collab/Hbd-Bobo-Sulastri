@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selamat Ulang Tahun Bobo ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+<body>
+
+<div id="welcome-screen">
+
+    <div class="hearts"></div>
+
+    <div class="welcome-content">
+        <h1>🎂 Selamat Ulang Tahun Bobo 🎂</h1>
+
+        <p>
+            Sebuah hadiah kecil dari anak-anak dan cucu-cucumu ❤️
+        </p>
+
+        <button onclick="mulaiWebsite()" class="start-btn">
+            💖 Buka Surat Untuk Bobo 💖
+        </button>
+    </div>
+
+</div>
+
+<div class="quote-box">
+
+    <h3>❤️ Untuk Bobo ❤️</h3>
+
+    <p>
+        Di balik senyummu, tersimpan kasih yang begitu luas.
+        Di balik kesabaranmu, tersimpan kekuatan yang menghangatkan keluarga.
+        Terima kasih telah menjadi rumah bagi begitu banyak hati.
+        Semoga bahagia selalu menyertaimu.
+    </p>
+
+</div>
+
+<audio id="bgm" loop>
+    <source src="lagu.mp3" type="audio/mpeg">
+</audio>
+
+    <img src="foto-bobo.jpg" class="bobo-photo">
+
+    <div class="menu">
+        <div class="menu-card" onclick="bukaKategori('anak')">
+            💌
+            <span>Surat dari Anak-Anakmu</span>
+        </div>
+
+        <div class="menu-card" onclick="bukaKategori('cucu')">
+            💌
+            <span>Surat dari Cucu-Cucumu</span>
+        </div>
+    </div>
+
+</div>
+
+<!-- Popup Kategori -->
+<div class="overlay" id="kategoriPopup">
+
+    <div class="popup">
+
+        <button class="close" onclick="tutupKategori()">✖</button>
+
+        <h2 id="judulKategori"></h2>
+
+        <div class="grid" id="isiKategori"></div>
+
+    </div>
+
+</div>
+
+<!-- Popup Surat -->
+<div class="overlay" id="suratPopup">
+
+    <div class="popup surat-popup">
+
+        <button class="close" onclick="tutupSurat()">✖</button>
+
+        <img id="suratFoto" class="surat-foto">
+
+        <h2 id="suratNama"></h2>
+
+        <div class="surat-box">
+            <p id="suratIsi"></p>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+<audio id="bgm" autoplay loop hidden>
+    <source src="lagu.mp3" type="audio/mpeg">
+</audio>
+</body>
+</html>

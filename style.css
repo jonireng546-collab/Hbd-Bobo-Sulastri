@@ -1,0 +1,434 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* Background Utama */
+
+body{
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #312e81,
+        #4c1d95
+    );
+
+    background-size:400% 400%;
+    animation:bgMove 15s ease infinite;
+
+    min-height:100vh;
+    overflow-x:hidden;
+
+    color:white;
+    text-align:center;
+}
+
+/* Animasi Background */
+
+@keyframes bgMove{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+/* Halaman Utama */
+
+.hero{
+    padding:40px 20px;
+}
+
+h1{
+    font-size:3.2rem;
+    margin-bottom:25px;
+
+    text-shadow:
+    0 0 20px rgba(255,255,255,.25);
+}
+
+/* Quote */
+
+.quote-box{
+
+    max-width:700px;
+
+    margin:0 auto 35px auto;
+
+    padding:25px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.25);
+}
+
+.quote-box h3{
+    margin-bottom:15px;
+    color:#facc15;
+}
+
+.quote-box p{
+
+    font-size:1.05rem;
+
+    line-height:1.9;
+
+    color:#f8fafc;
+
+    font-style:italic;
+}
+
+/* Foto Bobo */
+
+.bobo-photo{
+
+    width:320px;
+    height:320px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    border:5px solid rgba(255,255,255,.7);
+
+    box-shadow:
+    0 0 35px rgba(255,255,255,.2);
+
+    margin-bottom:40px;
+}
+
+/* Menu Surat */
+
+.menu{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+}
+
+.menu-card{
+
+    width:260px;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    cursor:pointer;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    color:white;
+
+    font-size:3rem;
+
+    transition:.3s;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.2);
+}
+
+.menu-card:hover{
+
+    transform:
+    translateY(-10px)
+    scale(1.03);
+}
+
+.menu-card span{
+
+    display:block;
+
+    margin-top:12px;
+
+    font-size:1.1rem;
+}
+
+/* Popup */
+
+.overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.8);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+    z-index:1000;
+}
+
+.popup{
+
+    background:white;
+
+    color:#111827;
+
+    width:90%;
+
+    max-width:900px;
+
+    border-radius:25px;
+
+    padding:25px;
+
+    position:relative;
+
+    max-height:90vh;
+
+    overflow:auto;
+}
+
+/* Tombol X */
+
+.close{
+
+    position:absolute;
+
+    top:15px;
+
+    right:15px;
+
+    width:40px;
+
+    height:40px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ef4444;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+}
+
+/* Grid Foto */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(180px,1fr));
+
+    gap:20px;
+
+    margin-top:25px;
+}
+
+.person{
+
+    background:#f8fafc;
+
+    border-radius:15px;
+
+    padding:15px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.person:hover{
+
+    transform:
+    scale(1.05);
+}
+
+.person img{
+
+    width:100%;
+
+    height:180px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+}
+
+.person h3{
+
+    margin-top:10px;
+
+    color:#111827;
+}
+
+/* Surat */
+
+.surat-popup{
+
+    max-width:700px;
+}
+
+.surat-foto{
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    margin-bottom:15px;
+}
+
+.surat-box{
+
+    margin-top:20px;
+
+    background:#f8fafc;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    line-height:1.9;
+
+    text-align:left;
+}
+
+/* Welcome Screen */
+
+#welcome-screen{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #312e81
+    );
+
+    z-index:9999;
+}
+
+.welcome-content{
+
+    padding:20px;
+}
+
+.welcome-content h1{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+}
+
+.welcome-content p{
+
+    font-size:1.2rem;
+
+    margin-bottom:25px;
+}
+
+/* Tombol Masuk */
+
+.start-btn{
+
+    padding:18px 35px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:1.1rem;
+
+    font-weight:600;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        45deg,
+        #f59e0b,
+        #fbbf24
+    );
+
+    box-shadow:
+    0 8px 25px rgba(245,158,11,.4);
+
+    transition:.3s;
+}
+
+.start-btn:hover{
+
+    transform:
+    scale(1.08);
+}
+
+/* Responsive HP */
+
+@media(max-width:768px){
+
+    h1{
+        font-size:2rem;
+    }
+
+    .bobo-photo{
+
+        width:250px;
+        height:250px;
+    }
+
+    .menu-card{
+
+        width:90%;
+    }
+
+    .quote-box{
+
+        margin:15px;
+    }
+}
